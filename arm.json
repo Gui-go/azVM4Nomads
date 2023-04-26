@@ -8,7 +8,7 @@
         // Service name parameter:
         "serviceName": {
             "type": "string",
-            "defaultValue": "ubumachine",
+            "defaultValue": "azservice",
             "minLength": 3,
             "maxLength": 20
         },
