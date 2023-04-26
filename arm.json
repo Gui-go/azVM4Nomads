@@ -206,14 +206,15 @@
                     "vmSize": "[variables('VMcap')[parameters('vmCapability')].vmSize]"
                 },
                 "storageProfile": {
+                    "imageReference": "[variables('imgRef')]",
                     "osDisk": {
+                        "name": "[concat(parameters('serviceName'), 'vmDisk')]"
                         "createOption": "fromImage",
                         "diskSizeGB": "[variables('VMcap')[parameters('vmCapability')].osDiskSize]",
                         "managedDisk": {
                             "storageAccountType": "[variables('VMcap')[parameters('vmCapability')].osDiskType]"
                         }
-                    },
-                    "imageReference": "[variables('imgRef')]"
+                    }
                 },
                 "networkProfile": {
                     "networkInterfaces": [
