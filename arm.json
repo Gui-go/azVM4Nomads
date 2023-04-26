@@ -208,7 +208,7 @@
                 "storageProfile": {
                     "imageReference": "[variables('imgRef')]",
                     "osDisk": {
-                        "name": "[concat(parameters('serviceName'), 'vmDisk')]"
+                        "name": "[concat(parameters('serviceName'), 'disk')]"
                         "createOption": "fromImage",
                         "diskSizeGB": "[variables('VMcap')[parameters('vmCapability')].osDiskSize]",
                         "managedDisk": {
